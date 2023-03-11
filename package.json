@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node server/index.js",
-    "dev": "nodemon server/index.js",
-    "build" : "node server/index.js"
+    "startnodemon": "nodemon server/index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run startnodemon\" \"npm run client\""
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +20,7 @@
     "mongoose": "^7.0.0"
   },
   "devDependencies": {
+    "concurrently": "^7.6.0",
     "dotenv": "^16.0.3",
     "nodemon": "^2.0.20"
   }
