@@ -7,7 +7,8 @@
     "start": "node server/index.js",
     "startnodemon": "nodemon server/index.js",
     "client": "npm run start --prefix client",
-    "dev": "concurrently \"npm run startnodemon\" \"npm run client\""
+    "dev": "concurrently \"npm run startnodemon\" \"npm run client\"",
+    "build": "node build"
   },
   "author": "",
   "license": "ISC",
@@ -22,6 +23,7 @@
   "devDependencies": {
     "concurrently": "^7.6.0",
     "dotenv": "^16.0.3",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "uglify-js": "^3.17.4"
   }
 }
